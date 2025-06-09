@@ -1,0 +1,64 @@
+We're creating a Guess who game in java, using swing. It must follow OOP principles, and it must accomplish a player vs AI. Here is the instructions:
+
+Guess Who? is a two player game where players use differential yes or no questions to isolate a hidden character. The first player to guess the other player's hidden character wins.
+Each player takes their game board of 24 faces and places one of 24 mystery cards in the empty frame in each game board. This card represents the character your opponent has to guess and the character you have to answer questions about. In the real game, the youngest player goes first, by asking the other player a characteristic found on one of their 24 visible characters. Example: “Does your character have brown hair?”
+If they say, “yes,” the asking player flips over all of the characters without brown hair. If they say, “no,” the asking player flips over the characters that have brown hair. Through the process of elimination, players will eventually be able to “guess” the name of the opponent's character.
+Each player gets one yes or no question per turn and may only guess (to win the game) once per game. If a player successfully guesses their opponent's hidden character then they win; if their guess is wrong then they lose.
+In groups of 2-  3, your task is to create a GUI based application that allows player vs. computer game play options using concepts taught in ICS4U. Use a method to determine who asks first.  The user will not reveal the character they had chosen for the AI of your program to guess until the end of the program. Your program should not ask the user to enter the character’s name or click to select it. The user will choose one from the 24 at their own will. You will also demonstrate your knowledge and understanding of the project management process to complete the required tasks at each stage of the PM process including a detailed class design (UML Diagram).  Once you have determined your group, a document would be shared with you to enter the names of the group members and their key role in the group as well. 
+
+
+Right now, we're on the code creation portion. We should have multiple files, like Character.java class, etc... The set of questions you will use is based on the attributes of each character. I will copy paste the information we have right now.
+private String name;
+    private String gender; 
+    private String eyeColour;
+    private String skinTone;
+    private String hairColour;
+    private boolean facialHair;
+    private boolean glasses; 
+    private boolean teethVisibility; 
+    private boolean wearingHat;
+    private String hairLength;
+    private boolean piercings;    
+    public Character (String name, String gender, String eyeColour, String skinTone, String hairColour, boolean facialHair, boolean glasses, boolean teethVisibility, boolean wearingHat, String hairLength, boolean piercings) {
+        this.name = name;
+        this.gender = gender;
+        this.eyeColour = eyeColour;
+        this.skinTone = skinTone; 
+        this.hairColour = hairColour;
+        this.facialHair = facialHair;
+        this.glasses = glasses;
+        this.teethVisibility = teethVisibility;
+        this.wearingHat = wearingHat;
+        this.hairLength = hairLength;
+        this.piercings = piercings;
+    }    public static void main(String[] args) {
+
+    /* -------------  MALES  ------------- */
+    Character Sam    = new Character("Sam",    "Male",   "Green", "Dark",  "Black",  false, false, false, true,  "Short",  false);
+    Character Nick   = new Character("Nick",   "Male",   "Brown", "Light", "Blonde", false, false, false, false, "Short",  true );
+    Character David  = new Character("David",  "Male",   "Brown", "Light", "Blonde", true,  false, true,  true,  "Short",  false);
+    Character Leo    = new Character("Leo",    "Male",   "Brown", "Dark",  "White",  true,  false, true,  false, "Short",  false);
+    Character Daniel = new Character("Daniel", "Male",   "Green", "Light", "Ginger", true,  false, false, false, "Tied",   false);
+    Character Ben    = new Character("Ben",    "Male",   "Brown", "Light", "Brown",  false, true,  false, false, "Short",  true );
+    Character Al     = new Character("Al",     "Male",   "Green", "Dark",  "White",  true,  true,  false, false, "Bald",   false);
+    Character Mike   = new Character("Mike",   "Male",   "Brown", "Light", "Black",  false, false, true,  true,  "Short",  false);
+    Character Gabe   = new Character("Gabe",   "Male",   "Brown", "Dark",  "Black",  false, false, false, false, "Short",  false);
+    Character Jordan = new Character("Jordan", "Male",   "Brown", "Dark",  "Black",  true,  false, false, false, "Short",  true );
+    Character Eric   = new Character("Eric",   "Male",   "Blue",  "Light", "Black",  false, false, false, false, "Short",  false);
+    Character Joe    = new Character("Joe",    "Male",   "Brown", "Dark",  "White",  true,  true,  true,  false, "Bald",   false);
+
+    /* -------------  FEMALES ------------- */
+    Character Olivia = new Character("Olivia", "Female", "Brown", "Dark",  "Black",  false, false, false, false, "Tied",   false);
+    Character Sofia  = new Character("Sofia",  "Female", "Green", "Dark",  "Brown",  false, false, true,  false, "Short",  true );
+    Character Liz    = new Character("Liz",    "Female", "Blue",  "Light", "White",  false, true,  true,  false, "Long",   false);
+    Character Lily   = new Character("Lily",   "Female", "Green", "Dark",  "Brown",  false, false, true,  true,  "Long",   false);
+    Character Emma   = new Character("Emma",   "Female", "Brown", "Light", "Ginger", false, false, false, false, "Tied",   false);
+    Character Katie  = new Character("Katie",  "Female", "Blue",  "Light", "Blonde", false, false, false, true,  "Tied",   false);
+    Character Amy    = new Character("Amy",    "Female", "Brown", "Light", "Black",  false, true,  false, false, "Short",  false);
+    Character Farah  = new Character("Farah",  "Female", "Blue",  "Dark",  "Black",  false, false, false, false, "Tied",   false);
+    Character Laura  = new Character("Laura",  "Female", "Green", "Dark",  "Black",  false, false, true,  false, "Long",   true );
+    Character Carmen = new Character("Carmen", "Female", "Brown", "Dark",  "White",  false, false, true,  false, "Short",  true );
+    Character Rachel = new Character("Rachel", "Female", "Blue",  "Light", "Brown",  false, true,  false, false, "Long",   true );
+    Character Mia    = new Character("Mia",    "Female", "Brown", "Dark",  "Black",  false, false, true,  false, "Long",   false);
+
+Your job is to create the code for the entire project. There will be multiple files. For instance, we will have one for the computer AI, the main game, and GUI, etc... Feel free to make whatever decision you need to accomplish the task. Please adhere to OOP principles.
